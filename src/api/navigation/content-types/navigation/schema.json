@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigations",
+  "info": { "singularName": "navigation", "pluralName": "navigations", "displayName": "Navigation" },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": {
+    "position": {
+      "type": "enumeration",
+      "enum": ["header", "footer"],
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav-item",
+      "pluginOptions": { "i18n": { "localized": true } }
+    }
+  }
+}
