@@ -1,5 +1,15 @@
-import type { Core } from '@strapi/strapi';
-
-const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({});
-
-export default config;
+export default ({ env }: { env: any }) => ({
+  i18n: {
+    enabled: true,
+    config: {
+      defaultLocale: 'it',
+      locales: ['it', 'en'],
+    },
+  },
+  'users-permissions': {
+    enabled: true,
+    config: {
+      jwtSecret: env('JWT_SECRET'),
+    },
+  },
+})
